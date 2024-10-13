@@ -9,6 +9,7 @@ const DB_CONNECTION_STRING = "mongodb+srv://admin:Anshul2003@comp3123.nrtch.mong
 
 mongoose.connect(DB_CONNECTION_STRING).then(() => console.log("MongoDB connected"))
 .catch((err) => console.error("Error connecting to MongoDB:", err.message));
+
 // mongoose.connect(DB_CONNECTION_STRING, {
 //     useNewUrlParser: true,
 //     useUnifiedTopology: true
