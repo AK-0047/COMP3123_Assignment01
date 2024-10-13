@@ -5,9 +5,9 @@ const mongoose = require('mongoose');
 const userRoutes = require('./routes/userRoutes');
 const employeeRoutes = require('./routes/employeeRoutes');
 
-const DB_CONNECTION_STRING = "mongodb+srv://admin:Anshul2003@comp3123.nrtch.mongodb.net/Assignment?retryWrites=true&w=majority&appName=comp3123"
+// const DB_CONNECTION_STRING = "mongodb+srv://admin:Anshul2003@comp3123.nrtch.mongodb.net/Assignment?retryWrites=true&w=majority&appName=comp3123"
 
-mongoose.connect(DB_CONNECTION_STRING).then(() => console.log("MongoDB connected"))
+mongoose.connect("mongodb+srv://admin:Anshul2003@comp3123.nrtch.mongodb.net/Assignment?retryWrites=true&w=majority&appName=comp3123").then(() => console.log("MongoDB connected"))
 .catch((err) => console.error("Error connecting to MongoDB:", err.message));
 
 // mongoose.connect(DB_CONNECTION_STRING, {
