@@ -24,6 +24,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded());
 
+app.get('/', (req, res) => {
+    res.send("<h1>Welcome to Assignment</h1>");
+});
+
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/emp', employeeRoutes);
 
