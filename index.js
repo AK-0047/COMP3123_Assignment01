@@ -4,6 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/userRoutes');
 const employeeRoutes = require('./routes/employeeRoutes');
+const cors = require('cors');
 
 // const DB_CONNECTION_STRING = "mongodb+srv://admin:Anshul2003@comp3123.nrtch.mongodb.net/Assignment?retryWrites=true&w=majority&appName=comp3123"
 
@@ -24,6 +25,12 @@ mongoose.connect("mongodb+srv://admin:Anshul2003@comp3123.a4aoq.mongodb.net/Assi
 
 const app = express();
 
+app.use(cors({
+        origin: 'http://localhost:3000',
+        methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+        allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+    })
+);
 app.use(express.json());
 app.use(express.urlencoded());
 
