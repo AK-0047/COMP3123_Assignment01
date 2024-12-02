@@ -26,7 +26,7 @@ mongoose.connect("mongodb+srv://admin:Anshul2003@comp3123.a4aoq.mongodb.net/Assi
 const app = express();
 
 app.use(cors({
-        origin: 'http://localhost:3000',
+        origin: 'https://101416629-comp3123-assignment2-reactjs.vercel.app/login',
         methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
         allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
     })
